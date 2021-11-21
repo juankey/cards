@@ -16,7 +16,7 @@ body{
     background-color: var(--gray-color);
 }
 img{
-    max-width: 100%;
+    width: 100%;
     display:block;  
  
 }

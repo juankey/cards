@@ -1,12 +1,15 @@
-.cards{ 
-   
-    margin: auto;
+.cards{  
+    margin: auto; 
     width: 90%;    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+ 
     grid-column-gap:.5rem;
     grid-row-gap: .7rem;   
+}
+.card__item{
+    
+    box-shadow: 3px 3px 2px #aaa;
 }
 .title-card,.card-text{
     color:rgba(0,0,0, .8);
@@ -19,7 +22,48 @@
 
 
 .card-text{
+    
+    margin: auto;
     background-color: #fff;
     text-transform: capitalize;
     padding-bottom:1rem ;
+}
+
+.folder {
+    margin: 1rem auto;
+    width: 90vw;
+    height: 90vh;
+    display: grid;  
+    grid-template-columns: repeat(6, 1fr);
+  
+    gap: .3rem;
+    grid-template-areas:"a a a b b b"
+                        "a a a b b b"                        
+                        "a a a b b b"
+                        "c c c c c c";
+}   
+.folder__item{
+    outline: 1px solid lightblue;
+    overflow: hidden;
+    
+}
+.folder__item > img {
+    box-shadow: 1px 1px 2px black;
+
+}
+.folder__item:first-child{
+    grid-area: a ;
+}
+.folder__item:nth-child(2){
+    filter: grayscale(.5);
+    grid-area: b ;
+}
+.folder__item:nth-child(3){
+    filter: hue-rotate(100deg);
+}
+.folder__item:nth-child(4){
+    filter: invert(.2);
+}
+.folder__item:nth-child(5){
+    filter:brightness(.5);
 }
